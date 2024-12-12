@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sevgilim Ezgi'ye Özel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #c3105a , #c3105a );
+            text-align: center;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        .counter {
+            font-size: 2rem;
+            color: #ffffff;
+            margin: 20px 0;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #ffffff;
+        }
+    </style>
+    <script>
+        function calculateDaysTogether() {
+            const startDate = new Date("2020-03-18");
+            const today = new Date();
+            const difference = today.setHours(0,0,0,0) - startDate.setHours(0,0,0,0);
+            const daysTogether = Math.floor(difference / (1000 * 60 * 60 * 24));
+            document.getElementById("days-counter").innerText = daysTogether;
+        }
+
+        window.onload = calculateDaysTogether;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Sevgilim Ezgi'ye ❤️</h1>
+        <p>18 Mart 2020'den beri hayatımda olduğun için çok şanslıyım.</p>
+        <p>Seni her geçen gün daha çok seviyorum. ❤️</p>
+        <div class="counter">
+            <p>Bugün itibariyle birlikte geçen gün sayımız:</p>
+            <p id="days-counter">0</p>
+        </div>
+    </div>
+    <footer>
+        Bu sayfa senin için hazırlandı, sevgilim. Sonsuza kadar seni seveceğim. 💕
+    </footer>
+</body>
+</html> 
